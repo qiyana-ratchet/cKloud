@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testlog
+spec:
+  containers:
+  - name: testlog
+    image: ckloud.repo/root/docker-registry/cloggenerator:v1
+    command: [
+    "/testlog"
+    ]
+
+  tolerations:
+  - key: "node-role.kubernetes.io/master"
+    operator: "Exists"
+    effect: "NoSchedule"
+
+    #imagePullSecrets:
+    #- name: test

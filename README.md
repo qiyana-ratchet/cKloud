@@ -1,3 +1,3 @@
 # cKloud
 
-docker / kubernetes, prometheus, fluentd, kibana
+docker / kubernetes
